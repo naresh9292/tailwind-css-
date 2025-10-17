@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
+@import "tailwindcss";
+
+
+
+/*  ...................... lecture 25--Directives in tailwind css ................*/
+
+/* @layer base {
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 40px;
+    }
+     h3{
+        font-size: 30px;
+    }
+    button{
+        border: 1px solid #999;
+        padding: 5px;
+        border-radius: 5px;
+    }
+} */
+
+/* @layer base {
+    h1{
+        @apply text-7xl;
+    }
+      h2{
+        @apply text-5xl;            
+    }
+      h3{
+        @apply text-4xl;
+    }
+    button{
+        @apply border;
+        @apply p-3;
+        @apply text-2xl;
+        @apply rounded;
+    }
+} */
+
+/*  ...................... lecture 26--custom classes ................*/
+
+/* @layer components {
+    .btn-primary{
+        @apply bg-blue-500 p-2 rounded hover:bg-blue-700 text-white
+    }
+} */
+
+/*  ...................... lecture 27-- Make button like bootstrap with custom classes ................*/
+
+@layer components {
+    .btn{
+        @apply border border-slate-400 rounded px-5 py-1.5 hover:bg-slate-100
+    }
+
+    .btn-primary{
+        @apply bg-blue-500 hover:bg-blue-600 text-white border-l-blue-500
+    }
+
+    .btn-success{
+        @apply bg-green-500 hover:bg-green-600 text-white border-l-green-500
+    }
+
+    .btn-secondary{
+        @apply bg-slate-500 hover:bg-slate-600 text-white border-l-slate-500
+    }
+
+    .btn-warning{
+        @apply bg-yellow-500 hover:bg-yellow-600 text-white border-l-yellow-500
+    }
+
+    .btn-danger{
+        @apply bg-red-500 hover:bg-red-600 text-white border-l-red-500
+    }
+
+    .btn-info{
+        @apply bg-cyan-500 hover:bg-cyan-600 text-white border-l-cyan-500
+    }
+
+    .btn-dark{
+        @apply bg-black hover:bg-slate-700 text-white border-l-black
+    }
+
+    /*........................lecture 31----------photo gallery.................*/
+
+    .img-gallery{
+        @apply w-80 rounded border-2 border-blue-200 transition duration-1000 hover:scale-110 hover:border-2 hover:border-blue-100 hover:brightness-125
+    }
+
+    
+}
+
+@theme {
+    --font-moonDance:"Moon Dance", cursive;
+}
